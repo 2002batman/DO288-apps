@@ -11,10 +11,10 @@ pipeline {
 
     environment {
         //TODO: Edit these vars as per your env
-        DEV_PROJECT = "do288-el-ch08-books-dev"
-        STAGE_PROJECT = "do288-el-ch08-books-stage"
+        DEV_PROJECT = "ch08-dev"
+        STAGE_PROJECT = "ch08-stage"
         APP_GIT_URL = "https://github.com/2002batman/DO288-apps"
-        NEXUS_SERVER = "http://nexus3-do288-el-ch10a.apps.openshift.ico.local/repository/nodejs"
+        NEXUS_SERVER = "http://nexus3-do288c.apps-crc.testing/repository/nodejs"
 
         // DO NOT CHANGE THE GLOBAL VARS BELOW THIS LINE
         APP_NAME = "books"
@@ -66,7 +66,6 @@ pipeline {
 
                         oc expose svc ${APP_NAME}
                    '''
-                //TODO: Create a new app and expose the service
             }
         }
 
